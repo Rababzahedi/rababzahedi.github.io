@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNova Solutions | Hardware & Software Innovation</title>
+    <title>Acquire IT Solution | Your Trusted Partner in IT, Hardware & Import Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -82,17 +80,38 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
+            text-decoration: none;
         }
 
-        .logo i {
-            font-size: 2rem;
+        .logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 0.9rem;
+            color: var(--light);
+            font-weight: 500;
+        }
+
+        .light-mode .logo-sub {
+            color: var(--dark);
         }
 
         .nav-links {
@@ -161,7 +180,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+                        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
             z-index: -1;
         }
 
@@ -213,15 +232,8 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         h1 {
@@ -400,229 +412,6 @@
             color: var(--primary);
         }
 
-        /* Survey Section */
-        .survey {
-            padding: 100px 0;
-            background: var(--darker);
-        }
-
-        .survey-container {
-            display: flex;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .survey-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .survey-form-container {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .survey-steps {
-            display: flex;
-            margin-bottom: 30px;
-        }
-
-        .survey-step {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-        }
-
-        .survey-step::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gray);
-            z-index: 1;
-        }
-
-        .survey-step:last-child::after {
-            display: none;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--gray);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 10px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .survey-step.active .step-number {
-            background: var(--primary);
-        }
-
-        .survey-step.completed .step-number {
-            background: var(--accent);
-        }
-
-        .step-title {
-            font-size: 0.9rem;
-        }
-
-        .survey-form {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(10px);
-        }
-
-        .form-step {
-            display: none;
-        }
-
-        .form-step.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            color: var(--light);
-            transition: var(--transition);
-        }
-
-        .light-mode .form-control {
-            background: rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            color: var(--dark);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .form-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 100px 0;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-image {
-            height: 200px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        .project-content {
-            padding: 20px;
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .project-link {
-            display: inline-block;
-            padding: 8px 15px;
-            background: var(--primary);
-            color: white;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .project-link:hover {
-            background: var(--primary-dark);
-        }
-
         /* Contact Section */
         .contact {
             padding: 100px 0;
@@ -662,6 +451,42 @@
         .contact-form {
             flex: 1;
             min-width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .light-mode .form-control {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--dark);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
         }
 
         /* Footer */
@@ -736,21 +561,24 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">
-                    <i class="fas fa-microchip"></i>
-                    TechNova
+                    <img src="2.jpg" alt="Acquire IT Solution" class="logo-img">
+                        ACQUIRE
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-main">ACQUIRE</div>
+                        <div class="logo-sub">IT SOLUTION</div>
+                    </div>
                 </a>
                 <div class="nav-links">
                     <a href="#home">Home</a>
                     <a href="#services">Services</a>
-                    <a href="#survey">Survey</a>
-                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <button class="theme-toggle" id="themeToggle">
@@ -766,32 +594,32 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Hardware & Software Solutions</h1>
-                    <div class="title">Innovating Tomorrow's Technology Today</div>
+                    <h1>ACQUIRE IT SOLUTION</h1>
+                    <div class="title">Your Trusted Partner in IT, Hardware & Import Solutions</div>
                     <p class="description">
-                        We provide cutting-edge hardware and software solutions tailored to your business needs.
-                        From embedded systems to enterprise applications, we deliver excellence in every project.
+                        We provide comprehensive IT solutions, hardware services, and import solutions 
+                        tailored to meet your business needs. With years of experience and a commitment 
+                        to excellence, we deliver reliable and innovative solutions.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#survey" class="btn">Get Started</a>
-                        <a href="#projects" class="btn btn-outline">Our Projects</a>
+                        <a href="#contact" class="btn">Get In Touch</a>
+                        <a href="#services" class="btn btn-outline">Our Services</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="floating-card">
-                        <i class="fas fa-server fa-2x"></i>
-                        <p>Server Solutions</p>
+                        <i class="fas fa-laptop fa-2x"></i>
+                        <p>IT Solutions</p>
                     </div>
                     <div class="floating-card">
-                        <i class="fas fa-mobile-alt fa-2x"></i>
-                        <p>Mobile Apps</p>
+                        <i class="fas fa-microchip fa-2x"></i>
+                        <p>Hardware</p>
                     </div>
                     <div class="floating-card">
-                        <i class="fas fa-network-wired fa-2x"></i>
-                        <p>Networking</p>
+                        <i class="fas fa-shipping-fast fa-2x"></i>
+                        <p>Import Solutions</p>
                     </div>
-                    <div
-                        style="width: 100%; height: 300px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
+                    <div style="width: 100%; height: 300px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                 </div>
@@ -813,10 +641,10 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" data-target="50">0</div>
-                    <div class="stat-label">Software Products</div>
+                    <div class="stat-label">IT Services</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-number" data-target="5">0</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
             </div>
@@ -832,276 +660,77 @@
             <div class="services-container">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Hardware Design</h3>
-                    <p>Custom hardware solutions including PCB design, embedded systems, and IoT devices tailored to
-                        your specific requirements.</p>
+                    <h3>IT Solutions</h3>
+                    <p>Comprehensive IT services including software development, network setup, cybersecurity, and IT consulting tailored to your business needs.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <h3>Software Development</h3>
-                    <p>Full-stack software development from web applications to mobile apps and desktop software using
-                        modern technologies.</p>
+                    <h3>Hardware Services</h3>
+                    <p>Complete hardware solutions from computer assembly and repair to server setup and maintenance with quality components.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Import Solutions</h3>
+                    <p>Efficient import services for IT equipment and hardware with customs clearance and delivery to your doorstep.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3>Networking Solutions</h3>
-                    <p>Enterprise networking infrastructure, security solutions, and cloud integration services for
-                        businesses of all sizes.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & Automation</h3>
-                    <p>Intelligent automation solutions, machine learning models, and AI-powered applications to
-                        streamline your operations.</p>
+                    <h3>Networking</h3>
+                    <p>Professional network setup, configuration, and maintenance for businesses of all sizes with reliable connectivity solutions.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Cybersecurity</h3>
-                    <p>Comprehensive security assessments, threat monitoring, and protection solutions to safeguard your
-                        digital assets.</p>
+                    <p>Comprehensive security solutions to protect your business from cyber threats with monitoring and prevention services.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Cloud migration, infrastructure setup, and management services across AWS, Azure, and Google
-                        Cloud platforms.</p>
+                    <h3>Cloud Services</h3>
+                    <p>Cloud migration, setup, and management services to help your business leverage the power of cloud computing.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Survey Section -->
-    <section class="survey" id="survey">
+    <!-- About Section -->
+    <section class="services" id="about" style="background: var(--darker);">
         <div class="container">
             <div class="section-title">
-                <h2>Project Survey</h2>
+                <h2>About Us</h2>
             </div>
-            <div class="survey-container">
-                <div class="survey-info">
-                    <h3>Tell Us About Your Project</h3>
-                    <p>Complete this short survey to help us understand your requirements and provide you with the best
-                        possible solution.</p>
-                    <p>Your responses will help us tailor our services to meet your specific needs and budget.</p>
-                    <div style="margin-top: 30px;">
-                        <h4>Why complete this survey?</h4>
-                        <ul style="list-style-type: none; margin-top: 15px;">
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                    style="color: var(--accent); margin-right: 10px;"></i> Get accurate project
-                                estimation</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                    style="color: var(--accent); margin-right: 10px;"></i> Receive tailored
-                                recommendations</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                    style="color: var(--accent); margin-right: 10px;"></i> Speed up the project
-                                initiation process</li>
-                        </ul>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide reliable and innovative IT, hardware, and import solutions that empower businesses to achieve their goals efficiently and effectively.</p>
                 </div>
-                <div class="survey-form-container">
-                    <div class="survey-steps">
-                        <div class="survey-step active" data-step="1">
-                            <div class="step-number">1</div>
-                            <div class="step-title">Project Type</div>
-                        </div>
-                        <div class="survey-step" data-step="2">
-                            <div class="step-number">2</div>
-                            <div class="step-title">Requirements</div>
-                        </div>
-                        <div class="survey-step" data-step="3">
-                            <div class="step-number">3</div>
-                            <div class="step-title">Timeline & Budget</div>
-                        </div>
-                        <div class="survey-step" data-step="4">
-                            <div class="step-number">4</div>
-                            <div class="step-title">Contact Info</div>
-                        </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
-
-                    <form class="survey-form" id="projectSurvey">
-                        <!-- Step 1: Project Type -->
-                        <div class="form-step active" data-step="1">
-                            <div class="form-group">
-                                <label class="form-label">What type of solution are you looking for?</label>
-                                <select class="form-control" name="projectType" required>
-                                    <option value="">Select project type</option>
-                                    <option value="hardware">Hardware Solution</option>
-                                    <option value="software">Software Solution</option>
-                                    <option value="both">Both Hardware & Software</option>
-                                    <option value="consulting">Consulting Services</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Which category best describes your project?</label>
-                                <select class="form-control" name="projectCategory" required>
-                                    <option value="">Select category</option>
-                                    <option value="iot">IoT Device</option>
-                                    <option value="web">Web Application</option>
-                                    <option value="mobile">Mobile Application</option>
-                                    <option value="enterprise">Enterprise Software</option>
-                                    <option value="embedded">Embedded System</option>
-                                    <option value="networking">Networking Solution</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-actions">
-                                <button type="button" class="btn" onclick="nextStep(2)">Next</button>
-                            </div>
-                        </div>
-
-                        <!-- Step 2: Requirements -->
-                        <div class="form-step" data-step="2">
-                            <div class="form-group">
-                                <label class="form-label">Please describe your project requirements:</label>
-                                <textarea class="form-control" name="requirements"
-                                    placeholder="Describe what you want to achieve with this project..."
-                                    required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">What are your main goals for this project?</label>
-                                <div class="checkbox-group">
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="goal1" name="goals" value="cost-reduction">
-                                        <label for="goal1">Cost Reduction</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="goal2" name="goals" value="efficiency">
-                                        <label for="goal2">Improve Efficiency</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="goal3" name="goals" value="innovation">
-                                        <label for="goal3">Innovation</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="goal4" name="goals" value="automation">
-                                        <label for="goal4">Automation</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="goal5" name="goals" value="scalability">
-                                        <label for="goal5">Scalability</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-actions">
-                                <button type="button" class="btn btn-outline" onclick="prevStep(1)">Previous</button>
-                                <button type="button" class="btn" onclick="nextStep(3)">Next</button>
-                            </div>
-                        </div>
-
-                        <!-- Step 3: Timeline & Budget -->
-                        <div class="form-step" data-step="3">
-                            <div class="form-group">
-                                <label class="form-label">What is your expected timeline for this project?</label>
-                                <select class="form-control" name="timeline" required>
-                                    <option value="">Select timeline</option>
-                                    <option value="1-3">1-3 months</option>
-                                    <option value="3-6">3-6 months</option>
-                                    <option value="6-12">6-12 months</option>
-                                    <option value="12+">12+ months</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">What is your estimated budget range?</label>
-                                <select class="form-control" name="budget" required>
-                                    <option value="">Select budget range</option>
-                                    <option value="5k">Under $5,000</option>
-                                    <option value="5-10k">$5,000 - $10,000</option>
-                                    <option value="10-25k">$10,000 - $25,000</option>
-                                    <option value="25-50k">$25,000 - $50,000</option>
-                                    <option value="50k+">$50,000+</option>
-                                </select>
-                            </div>
-                            <div class="form-actions">
-                                <button type="button" class="btn btn-outline" onclick="prevStep(2)">Previous</button>
-                                <button type="button" class="btn" onclick="nextStep(4)">Next</button>
-                            </div>
-                        </div>
-
-                        <!-- Step 4: Contact Info -->
-                        <div class="form-step" data-step="4">
-                            <div class="form-group">
-                                <label class="form-label">Your Name</label>
-                                <input type="text" class="form-control" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Company/Organization</label>
-                                <input type="text" class="form-control" name="company">
-                            </div>
-                            <div class="form-actions">
-                                <button type="button" class="btn btn-outline" onclick="prevStep(3)">Previous</button>
-                                <button type="submit" class="btn">Submit Survey</button>
-                            </div>
-                        </div>
-                    </form>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading provider of comprehensive technology solutions, recognized for our quality services and customer satisfaction.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-industry"></i>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Industrial IoT Monitoring</h3>
-                        <p>Custom IoT solution for real-time monitoring of industrial equipment with predictive
-                            maintenance capabilities.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">E-commerce Platform</h3>
-                        <p>Scalable e-commerce solution with inventory management, payment processing, and analytics
-                            dashboard.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Healthcare Monitoring System</h3>
-                        <p>Wearable device and software platform for remote patient monitoring and health data analysis.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Details</a>
-                        </div>
-                    </div>
+                    <h3>Our Values</h3>
+                    <p>We value integrity, innovation, customer satisfaction, and continuous improvement in all our services and business relationships.</p>
                 </div>
             </div>
         </div>
@@ -1121,8 +750,8 @@
                         </div>
                         <div>
                             <h3>Our Location</h3>
-                            <p>123 Tech Avenue, Innovation District</p>
-                            <p>San Francisco, CA 94107</p>
+                            <p>Melandah Bazar Road, Melandah Municipality</p>
+                            <p>Melandah, Jamalpur</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1131,7 +760,7 @@
                         </div>
                         <div>
                             <h3>Phone Number</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+8801784113912</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1140,7 +769,7 @@
                         </div>
                         <div>
                             <h3>Email Address</h3>
-                            <p>info@technova.com</p>
+                            <p>acquirerisolution@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1149,11 +778,149 @@
                         </div>
                         <div>
                             <h3>Working Hours</h3>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                            <p>Saturday: 10:00 AM - 2:00 PM</p>
+                            <p>Saturday - Thursday: 9:00 AM - 6:00 PM</p>
+                            <p>Friday: 10:00 AM - 1:00 PM</p>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" class="form-control
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="logo" style="justify-content: center; margin-bottom: 20px;">
+                <div class="logo-img-placeholder" style="width: 50px; height: 50px; background: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 5px; color: white; font-weight: bold;">
+                    ACQUIRE
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">ACQUIRE</div>
+                    <div class="logo-sub">IT SOLUTION</div>
+                </div>
+            </a>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="copyright">© 2025 Acquire IT Solution. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            
+            if (document.body.classList.contains('light-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+                if (document.body.classList.contains('light-mode')) {
+                    header.style.background = 'rgba(248, 250, 252, 0.95)';
+                }
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.9)';
+                if (document.body.classList.contains('light-mode')) {
+                    header.style.background = 'rgba(248, 250, 252, 0.9)';
+                }
+            }
+        });
+
+        // Animated Counter for Stats
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+
+        const animateCounter = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounter, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Start counter animation when stats section is in view
+        const statsSection = document.querySelector('.stats');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
